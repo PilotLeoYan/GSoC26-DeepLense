@@ -44,8 +44,8 @@ To reproduce the experiments, cloning the repository and setting up a virtual en
 
 ```bash
 # Clone the repository
-git clone [https://github.com/](https://github.com/)[YourUsername]/[RepoName].git
-cd [RepoName]
+git clone https://github.com/PilotLeoYan/GSoC26-DeepLense.git
+cd GSoC26-DeepLense
 
 # Install dependencies
 pip install -r requirements.txt
