@@ -5,6 +5,7 @@
 [![Python 3.14+](https://img.shields.io/badge/python-3.14+-blue.svg)](https://www.python.org/downloads/)
 
 **Organization:** Universidad de Guadalajara 
+
 **Author:** Ortega Rivera Leonardo Fabyan
 
 ---
@@ -35,6 +36,10 @@ The progression of the empirical research is documented through the following ex
 ### Task 1. Gravitational Lens Substructure Classification via Modified ResNet-18.pdf
 * **Objective:** Define and initialize a modified ResNet-18 architecture from scratch. The base architecture was adapted by modifying the initial convolutional layer to accept single-channel input and replacing the final fully connected layer to output three-class logits. Prior to training, a structured suite of six sanity checks (e.g., single-batch memorization, gradient stability validation) was executed, followed by Bayesian hyperparameter optimization utilizing the Optuna framework.
 * **Results:** The model was trained for 100 epochs using the AdamW optimizer. The optimal checkpoint (Epoch 86) achieved a validation accuracy of **93.76%** and a macro-averaged F1-score of **0.9370**. Evaluation on the held-out validation set demonstrated a mean AUC of **0.9908** under a One-vs-Rest ROC scheme. Confusion matrix analysis indicated that the SubHalo (Sphere) class presented the greatest discriminative challenge, exhibiting the most inter-class confusion.
+
+### Task 7. A Physics-Informed Preprocessing Approach for Dark Matter Substructure Classification in Gravitational Lensing
+* **Objective:** Implement a physics-informed preprocessing method utilizing the Radial Symmetry Residual (RSR), a parameter-free map that isolates perturbations from the idealized Singular Isothermal Sphere (SIS) lensing model. The ResNet-18 architecture was modified to process a two-channel input tensor (the raw image concatenated with the RSR channel) without altering the underlying training objective or hyperparameters. Finally, model interpretability was evaluated using Gradient-weighted Class Activation Mapping (Grad-CAM).
+* **Results:** The physics-informed framework achieved a validation accuracy of 93.65%, a macro F1-score of 0.9357, and a macro-average AUC of 0.9915 under a One-vs-Rest protocol. Grad-CAM visual analysis empirically validated the approach, demonstrating that the model's attention correctly localized on physically meaningful signal deviations-such as compact flux anomalies for subhalos and extended topological defects for vortices-rather than relying on spurious global image statistics.
 
 ---
 
@@ -71,3 +76,13 @@ The empirical evaluations and model training pipelines documented in this reposi
 ├── README.md
 └── requirements.txt
 ```
+
+<img width="524" height="400" alt="classes" style="display: block; margin: auto; width: 50%;"
+  src="https://github.com/PilotLeoYan/GSoC26-DeepLense/blob/main/notebooks/task1_images/classes.png" 
+/>
+
+## Example of GradCam
+
+<img width="524" height="400" alt="task7-examples_rsr" style="display: block; margin: auto; width: 50%;"
+  src="https://github.com/PilotLeoYan/GSoC26-DeepLense/blob/main/notebooks/task7_rsr_images/example_of_grad_cam_over_the_valid_set.png" 
+/>
