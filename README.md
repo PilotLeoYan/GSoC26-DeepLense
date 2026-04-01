@@ -21,7 +21,7 @@ The purpose of this repository is to provide a reproducible experimental environ
 2. Applying these models to study dark matter in various methodological contexts, such as classification, regression, and anomaly detection.
 3. Enhancing the accuracy and interpretability of mass distribution estimates, extracting critical underlying insights into lensing systems and their sub-structures.
 
-For comprehensive details regarding the methodology and theoretical framework, please refer to the [Original GSoC Proposal]([https://DeepLense.org/gsoc/2026/proposal_DEEPLENSE5.html](https://ml4sci.org/gsoc/2026/proposal_DEEPLENSE5.html)).
+For comprehensive details regarding the methodology and theoretical framework, please refer to the [Original GSoC Proposal](https://ml4sci.org/gsoc/2026/proposal_DEEPLENSE5.html).
 
 ---
 
